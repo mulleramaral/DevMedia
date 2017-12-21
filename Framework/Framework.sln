@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Globalization_Example", "System.Globalization_Example\System.Globalization_Example.csproj", "{2505D026-64F1-45F4-B636-0D1AC7757A31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Globalization_Example", "..\System.Globalization_Example\System.Globalization_Example\System.Globalization_Example.csproj", "{2505D026-64F1-45F4-B636-0D1AC7757A31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.IO_Example", "System.IO_Example\System.IO_Example.csproj", "{706C1C44-C53E-482A-8ABE-E2685B598B93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.IO_Example", "..\System.IO_Example\System.IO_Example\System.IO_Example.csproj", "{706C1C44-C53E-482A-8ABE-E2685B598B93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Resources_Example", "System.Resources_Example\System.Resources_Example.csproj", "{7BAA9D3E-AFF4-426C-B679-96211A170148}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Resources_Example", "..\System.Resources_Example\System.Resources_Example\System.Resources_Example.csproj", "{7BAA9D3E-AFF4-426C-B679-96211A170148}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
