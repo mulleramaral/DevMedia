@@ -18,7 +18,6 @@ namespace System.Globalization_Example
             CultureInfo ciUI = Thread.CurrentThread.CurrentUICulture;
 
             CultureInfo ci = new CultureInfo("en-US");
-            //System.Threading.Thread.CurrentThread.CurrentCulture = ci;
             System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
 
             CultureInfo cinv = CultureInfo.InvariantCulture;
@@ -26,8 +25,6 @@ namespace System.Globalization_Example
             Console.Write(System.Globalization_Example.Main.DESCRICAO);
             Console.ReadKey();
             #endregion
-
-
         }
     }
 }
