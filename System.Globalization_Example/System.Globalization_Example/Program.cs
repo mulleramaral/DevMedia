@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Threading;
 
 namespace System.Globalization_Example
 {
@@ -12,9 +13,21 @@ namespace System.Globalization_Example
             #endregion
 
             #region CultureInfo
-            CultureInfo cultureInfo = new CultureInfo("pt-BR");
+            CultureInfo cit = System.Threading.Thread.CurrentThread.CurrentCulture;
 
+            CultureInfo ciUI = Thread.CurrentThread.CurrentUICulture;
+
+            CultureInfo ci = new CultureInfo("en-US");
+            //System.Threading.Thread.CurrentThread.CurrentCulture = ci;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
+
+            CultureInfo cinv = CultureInfo.InvariantCulture;
+
+            Console.Write(System.Globalization_Example.Main.DESCRICAO);
+            Console.ReadKey();
             #endregion
+
+
         }
     }
 }

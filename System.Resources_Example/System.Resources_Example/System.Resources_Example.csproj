@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2505D026-64F1-45F4-B636-0D1AC7757A31}</ProjectGuid>
+    <ProjectGuid>{7BAA9D3E-AFF4-426C-B679-96211A170148}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>System.Globalization_Example</RootNamespace>
-    <AssemblyName>System.Globalization_Example</AssemblyName>
+    <RootNamespace>System.Resources_Example</RootNamespace>
+    <AssemblyName>System.Resources_Example</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,15 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Recurso.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Main.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Main.en-US.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Main.en-US.resx</DependentUpon>
+      <DependentUpon>Recurso.resx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,13 +54,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Main.en-US.resx">
+    <EmbeddedResource Include="Recurso.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Main.en-US.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Main.Designer.cs</LastGenOutput>
+      <LastGenOutput>Recurso.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>System.Resources_Example</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
