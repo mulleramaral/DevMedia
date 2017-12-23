@@ -8,7 +8,7 @@ namespace System.XML_Example
     public partial class Form2 : Form
     {
 
-        string arquivo = @"D:\Aulas\.NET Framework 4.5\Agenda2.xml";
+        string arquivo = @"C:\Temp\Agenda2.xml";
         XmlDocument xmlDoc = new XmlDocument();
 
         public Form2()
@@ -22,7 +22,6 @@ namespace System.XML_Example
                 xmlDoc.AppendChild(nodeRoot);
                 xmlDoc.Save(arquivo);
             }
-
             ReadAgenda();
         }
 
@@ -36,11 +35,21 @@ namespace System.XML_Example
             }
         }
 
-        private void Add()
+        private void Add(string nome,string telefone)
         {
             XElement xElement = new XElement("Contato");
-            xElement.Add(new XAttribute("nome", ""));
-            xElement.Add(new XAttribute("telefone", ""));
+            xElement.Add(new XAttribute("nome", nome));
+            xElement.Add(new XAttribute("telefone", telefone));
+
+            XElement xDoc = XElement.Load(arquivo);
+            xDoc.Add(xElement);
+            xDoc.Save(arquivo);
+            ReadAgenda();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Add(txtNome.Text, txtTelefone.Text);
         }
     }
 }
