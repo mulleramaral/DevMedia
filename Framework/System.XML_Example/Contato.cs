@@ -1,8 +1,13 @@
-﻿namespace System.XML_Example
+﻿using System.Xml.Serialization;
+
+namespace System.XML_Example
 {
+    [Serializable()]
     public class Contato
     {
-        public string nome { get; set; }
-        public string telefone { get; set; }
+        [XmlElement("Nome")]
+        public string Nome { get; set; }
+        [XmlElement("Telefone")]
+        public string Telefone { get; set; }
     }
 }

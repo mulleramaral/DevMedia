@@ -1,9 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace System.XML_Example
 {
+    [Serializable()]
+    [XmlRoot("Contatos")]
     public class Contatos
     {
-        public List<Contato> contatos { get; set; }
+        [XmlElement("Contato")]
+        public List<Contato> Contato { get; set; }
     }
 }

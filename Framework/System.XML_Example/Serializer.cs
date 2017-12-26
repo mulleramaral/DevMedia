@@ -17,7 +17,7 @@ namespace System.XML_Example
             }
         }
 
-        public static XElement Serialize<T>(this object o)
+        public static XElement Serialize<T>(this T o)
         {
             using (var memoryStream = new MemoryStream())
             {
