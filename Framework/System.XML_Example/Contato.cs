@@ -5,6 +5,8 @@ namespace System.XML_Example
     [Serializable()]
     public class Contato
     {
+        [XmlElement]
+        public int Id { get; set; }
         [XmlElement("Nome")]
         public string Nome { get; set; }
         [XmlElement("Telefone")]
