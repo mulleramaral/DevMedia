@@ -34,6 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblContatos = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -81,16 +83,36 @@
             // lblContatos
             // 
             this.lblContatos.AutoSize = true;
-            this.lblContatos.Location = new System.Drawing.Point(162, 10);
+            this.lblContatos.Location = new System.Drawing.Point(18, 136);
             this.lblContatos.Name = "lblContatos";
             this.lblContatos.Size = new System.Drawing.Size(0, 13);
             this.lblContatos.TabIndex = 11;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(134, 7);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(318, 290);
+            this.listBox1.TabIndex = 12;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(377, 303);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 13;
+            this.btnDelete.Text = "Deletar";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 316);
+            this.ClientSize = new System.Drawing.Size(464, 364);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblContatos);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtTelefone);
@@ -113,5 +135,7 @@
         private Windows.Forms.Label label2;
         private Windows.Forms.Label label1;
         private Windows.Forms.Label lblContatos;
+        private Windows.Forms.ListBox listBox1;
+        private Windows.Forms.Button btnDelete;
     }
 }
