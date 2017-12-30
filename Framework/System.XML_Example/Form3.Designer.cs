@@ -36,15 +36,22 @@
             this.lblContatos = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSelecionar = new System.Windows.Forms.Button();
+            this.panelIncluir = new System.Windows.Forms.Panel();
+            this.panelAlterar = new System.Windows.Forms.Panel();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.panelIncluir.SuspendLayout();
+            this.panelAlterar.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(12, 100);
+            this.btnSalvar.Location = new System.Drawing.Point(9, 6);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 10;
-            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.Text = "Incluir";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -91,14 +98,14 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(134, 7);
+            this.listBox1.Location = new System.Drawing.Point(252, 7);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(318, 290);
             this.listBox1.TabIndex = 12;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(377, 303);
+            this.btnDelete.Location = new System.Drawing.Point(495, 303);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 13;
@@ -106,15 +113,65 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnSelecionar
+            // 
+            this.btnSelecionar.Location = new System.Drawing.Point(414, 303);
+            this.btnSelecionar.Name = "btnSelecionar";
+            this.btnSelecionar.Size = new System.Drawing.Size(75, 23);
+            this.btnSelecionar.TabIndex = 14;
+            this.btnSelecionar.Text = "Selecionar";
+            this.btnSelecionar.UseVisualStyleBackColor = true;
+            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
+            // 
+            // panelIncluir
+            // 
+            this.panelIncluir.Controls.Add(this.btnSalvar);
+            this.panelIncluir.Location = new System.Drawing.Point(12, 100);
+            this.panelIncluir.Name = "panelIncluir";
+            this.panelIncluir.Size = new System.Drawing.Size(234, 35);
+            this.panelIncluir.TabIndex = 15;
+            // 
+            // panelAlterar
+            // 
+            this.panelAlterar.Controls.Add(this.btnCancelar);
+            this.panelAlterar.Controls.Add(this.btnAlterar);
+            this.panelAlterar.Location = new System.Drawing.Point(12, 100);
+            this.panelAlterar.Name = "panelAlterar";
+            this.panelAlterar.Size = new System.Drawing.Size(231, 81);
+            this.panelAlterar.TabIndex = 16;
+            this.panelAlterar.Visible = false;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(9, 4);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.TabIndex = 0;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(91, 4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 364);
+            this.ClientSize = new System.Drawing.Size(622, 364);
+            this.Controls.Add(this.panelAlterar);
+            this.Controls.Add(this.panelIncluir);
+            this.Controls.Add(this.btnSelecionar);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblContatos);
-            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
@@ -122,6 +179,8 @@
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
+            this.panelIncluir.ResumeLayout(false);
+            this.panelAlterar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +196,10 @@
         private Windows.Forms.Label lblContatos;
         private Windows.Forms.ListBox listBox1;
         private Windows.Forms.Button btnDelete;
+        private Windows.Forms.Button btnSelecionar;
+        private Windows.Forms.Panel panelIncluir;
+        private Windows.Forms.Panel panelAlterar;
+        private Windows.Forms.Button btnCancelar;
+        private Windows.Forms.Button btnAlterar;
     }
 }

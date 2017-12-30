@@ -9,6 +9,8 @@ namespace System.XML_Example
 
         Contatos contatos;
 
+        private int idSelecionado;
+
         public Form3()
         {
             InitializeComponent();
@@ -64,6 +66,44 @@ namespace System.XML_Example
                 MessageBox.Show("Nenhum item selecionado");
             }
 
+        }
+
+        private void btnSelecionar_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex > -1)
+            {
+                panelIncluir.Visible = false;
+                panelAlterar.Visible = true;
+
+                Contato c = contatos.Contato.Find(p => p.Id == (int)listBox1.SelectedValue);
+                idSelecionado = c.Id;
+                txtNome.Text = c.Nome;
+                txtTelefone.Text = c.Telefone;
+            }
+            else
+            {
+                MessageBox.Show("Nenhum item selecionado");
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            panelAlterar.Visible = false;
+            panelIncluir.Visible = true;
+
+            txtNome.Text = txtTelefone.Text = string.Empty;
+            idSelecionado = 0;
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            Contato contato = contatos.Contato.Find(p => p.Id == idSelecionado);
+            contato.Nome = txtNome.Text;
+            contato.Telefone = txtTelefone.Text;
+            SContatos.Write(contatos);
+            BindListBox();
+
+            btnCancelar_Click(null, null);
         }
     }
 }
