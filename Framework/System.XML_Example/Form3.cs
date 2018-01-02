@@ -34,7 +34,10 @@ namespace System.XML_Example
             Contato c = new Contato();
             c.Id = NextId();
             c.Nome = txtNome.Text;
-            c.Telefone = txtTelefone.Text;
+            c.Telefone.Add(txtResidencial.Text);
+            c.Telefone.Add(txtComercial.Text);
+            c.Telefone.Add(txtCelular.Text);
+            c.Obs = txtObs.Text;
 
             contatos.Contato.Add(c);
 
@@ -78,7 +81,9 @@ namespace System.XML_Example
                 Contato c = contatos.Contato.Find(p => p.Id == (int)listBox1.SelectedValue);
                 idSelecionado = c.Id;
                 txtNome.Text = c.Nome;
-                txtTelefone.Text = c.Telefone;
+                txtResidencial.Text = c.Telefone.ElementAt(0);
+                txtComercial.Text = c.Telefone.ElementAt(1);
+                txtCelular.Text = c.Telefone.ElementAt(2);
             }
             else
             {
@@ -91,7 +96,7 @@ namespace System.XML_Example
             panelAlterar.Visible = false;
             panelIncluir.Visible = true;
 
-            txtNome.Text = txtTelefone.Text = string.Empty;
+            txtNome.Text = txtResidencial.Text = string.Empty;
             idSelecionado = 0;
         }
 
@@ -99,7 +104,10 @@ namespace System.XML_Example
         {
             Contato contato = contatos.Contato.Find(p => p.Id == idSelecionado);
             contato.Nome = txtNome.Text;
-            contato.Telefone = txtTelefone.Text;
+            contato.Telefone.Add(txtResidencial.Text);
+            contato.Telefone.Add(txtComercial.Text);
+            contato.Telefone.Add(txtCelular.Text);
+            contato.Obs = txtObs.Text;
             SContatos.Write(contatos);
             BindListBox();
 
