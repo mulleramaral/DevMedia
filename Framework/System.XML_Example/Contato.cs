@@ -11,7 +11,7 @@ namespace System.XML_Example
         [XmlElement("Nome")]
         public string Nome { get; set; }
         [XmlArray("Telefone")]
-        public List<string> Telefone { get; set; }
+        public List<Telefone> Telefone { get; set; }
         [XmlElement("Obs")]
         public string Obs { get; set; }
 
@@ -19,7 +19,7 @@ namespace System.XML_Example
 
         public Contato()
         {
-            Telefone = new List<string>();
+            Telefone = new List<Telefone>();
         }
     }
 }

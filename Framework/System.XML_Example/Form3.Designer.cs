@@ -47,6 +47,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnRemoverFiltro = new System.Windows.Forms.Button();
             this.panelIncluir.SuspendLayout();
             this.panelAlterar.SuspendLayout();
             this.SuspendLayout();
@@ -215,11 +217,33 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "Celular";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(6, 329);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 23;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnRemoverFiltro
+            // 
+            this.btnRemoverFiltro.Location = new System.Drawing.Point(333, 304);
+            this.btnRemoverFiltro.Name = "btnRemoverFiltro";
+            this.btnRemoverFiltro.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoverFiltro.TabIndex = 24;
+            this.btnRemoverFiltro.Text = "Remover Filtro";
+            this.btnRemoverFiltro.UseVisualStyleBackColor = true;
+            this.btnRemoverFiltro.Click += new System.EventHandler(this.btnRemoverFiltro_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 364);
+            this.Controls.Add(this.btnRemoverFiltro);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtComercial);
@@ -267,5 +291,7 @@
         private Windows.Forms.Label label4;
         private Windows.Forms.TextBox txtCelular;
         private Windows.Forms.Label label5;
+        private Windows.Forms.Button btnBuscar;
+        private Windows.Forms.Button btnRemoverFiltro;
     }
 }
