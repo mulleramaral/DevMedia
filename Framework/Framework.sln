@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Resources_Example", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.XML_Example", "System.XML_Example\System.XML_Example.csproj", "{43FDB1A0-E1C7-4EA5-BAC1-2206752E4F3B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroClientes", "CadastroClientes\CadastroClientes.csproj", "{91889ABD-5F4A-4589-B9C1-BBADBD80C999}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{43FDB1A0-E1C7-4EA5-BAC1-2206752E4F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43FDB1A0-E1C7-4EA5-BAC1-2206752E4F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43FDB1A0-E1C7-4EA5-BAC1-2206752E4F3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91889ABD-5F4A-4589-B9C1-BBADBD80C999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91889ABD-5F4A-4589-B9C1-BBADBD80C999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91889ABD-5F4A-4589-B9C1-BBADBD80C999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91889ABD-5F4A-4589-B9C1-BBADBD80C999}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
