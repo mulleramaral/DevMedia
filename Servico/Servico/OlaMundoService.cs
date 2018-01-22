@@ -1,6 +1,6 @@
 ﻿namespace Servico
 {
-    public class Service1 : IOlaMundoService
+    public class OlaMundoService: IOlaMundoService
     {
         public string OlaMundo()
         {

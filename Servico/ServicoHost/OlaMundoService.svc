@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Service" CodeBehind="Servico.OlaMundoService" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Servico.OlaMundoService"%>
