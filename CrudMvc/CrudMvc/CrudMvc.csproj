@@ -153,8 +153,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802062339360_InitialCreate.cs" />
+    <Compile Include="Migrations\201802062339360_InitialCreate.Designer.cs">
+      <DependentUpon>201802062339360_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802072307441_Professor.cs" />
+    <Compile Include="Migrations\201802072307441_Professor.Designer.cs">
+      <DependentUpon>201802072307441_Professor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\EscolaContext.cs" />
+    <Compile Include="Models\Professor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -216,6 +226,14 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802062339360_InitialCreate.resx">
+      <DependentUpon>201802062339360_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802072307441_Professor.resx">
+      <DependentUpon>201802072307441_Professor.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
