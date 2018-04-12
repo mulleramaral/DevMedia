@@ -1,10 +1,12 @@
-﻿namespace Data
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Domain
 {
-    public class Produto
+    [Table("loja")]
+    public class Loja
     {
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public decimal Valor { get; set; }
     }
 }
