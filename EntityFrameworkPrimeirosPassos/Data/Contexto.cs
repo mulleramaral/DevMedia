@@ -8,6 +8,7 @@ namespace Data
         public Contexto() : base("Db")
         {
             Database.SetInitializer(new CreateDatabaseIfNotExists<Contexto>());
+            Database.Initialize(false);
         }
 
         public DbSet<Produto> Produtos { get; set; }
